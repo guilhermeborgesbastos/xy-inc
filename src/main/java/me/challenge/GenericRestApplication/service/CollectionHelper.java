@@ -13,6 +13,7 @@ import org.bson.Document;
 import com.mongodb.client.MongoCollection;
 import me.challenge.GenericRestApplication.utils.ISearch;
 import me.challenge.GenericRestApplication.utils.ValidationUtil;
+import org.bson.conversions.Bson;
 
 public class CollectionHelper {
     	private final ISearch search;
@@ -24,8 +25,13 @@ public class CollectionHelper {
 		this.search = search;
 		this.validation = new ValidationUtil(model);
 	}
-
-	// TODO: Create the validation Class
-        // TODO: Create the CRUD methods
+        
+        // private method(s)
+        private Bson searchByID(String ID) {
+		return search.searchByID(ID);
+	}
+        
+        // TODO: implement the public method(s)
+        
 
 }
