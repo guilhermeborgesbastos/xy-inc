@@ -104,7 +104,19 @@ public class ModelController {
         // verify the if the update got success and return a feedback
         return update ? ResponseEntity.ok(true) : ResponseEntity.badRequest().body(false);
     }
-        
-    // TODO: finish the mapping of the remaning routes
+    
+    /**
+     * Route to delete a specific saved `document` into an specific model
+     * @param model
+     * @param documentID
+     * @return 
+     */
+    @RequestMapping(value = "/{model}/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Boolean> delete(@PathVariable("model") String model, @PathVariable("id") String ID) {
+        // call the method to delete the `document`
+        boolean delete = collectionDatabaseUtil.use(model).delete(ID);
+        // verify the if the delete got success and return a feedback
+        return delete ? ResponseEntity.ok(true) : ResponseEntity.badRequest().body(false);
+    }
     
 }
