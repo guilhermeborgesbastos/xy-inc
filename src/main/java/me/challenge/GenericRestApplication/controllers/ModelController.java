@@ -13,6 +13,8 @@ import me.challenge.GenericRestApplication.utils.CollectionDatabaseUtil;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +27,16 @@ public class ModelController {
     private CollectionDatabaseUtil collectionDatabaseUtil;
     
     /**
+     * Route to save a new `document`
+     * @param document
+     * @return Document
+     */
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public Document modeloSave(@RequestBody Document document) {
+        return collectionDatabaseUtil.use("/").save(document);
+    }
+    
+    /**
      * Route to get a specific document searching for the ID
      * @param ID
      * @return Document
@@ -34,6 +46,6 @@ public class ModelController {
             return collectionDatabaseUtil.use("/").get(ID);
     }
     
-    // TODO: finish the maping of the remaning routes
+    // TODO: finish the mapping of the remaning routes
     
 }
