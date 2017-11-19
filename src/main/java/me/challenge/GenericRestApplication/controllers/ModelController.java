@@ -90,6 +90,20 @@ public class ModelController {
         return collectionDatabaseUtil.use(model).save(document);
     }
     
+    /**
+     * Route to update a specific saved `document` into an specific model
+     * @param model
+     * @param ID
+     * @param document
+     * @return
+     */
+    @RequestMapping(value = "/{model}/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Boolean> update(@PathVariable("model") String model, @PathVariable("id") String ID, @RequestBody Document document) {
+        // call the method to update the `document`
+        boolean update = collectionDatabaseUtil.use(model).update(ID, document);
+        // verify the if the update got success and return a feedback
+        return update ? ResponseEntity.ok(true) : ResponseEntity.badRequest().body(false);
+    }
         
     // TODO: finish the mapping of the remaning routes
     
