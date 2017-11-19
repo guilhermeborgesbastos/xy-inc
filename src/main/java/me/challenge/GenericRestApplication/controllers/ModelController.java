@@ -67,6 +67,17 @@ public class ModelController {
     public List<Document> getAll(@PathVariable("model") String model) {
         return collectionDatabaseUtil.use(model).getAll();
     }
+    
+    /**
+     * Route to get an specific saved `document` into an specific model
+     * @param modelo
+     * @param ID
+     * @return Document
+     */
+    @RequestMapping(value = "/{model}/{id}", method = RequestMethod.GET)
+    public Document get(@PathVariable("model") String modelo, @PathVariable("id") String ID) {
+        return collectionDatabaseUtil.use(modelo).get(ID);
+    }
         
     // TODO: finish the mapping of the remaning routes
     
