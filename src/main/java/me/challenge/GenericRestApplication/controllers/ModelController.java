@@ -1,8 +1,8 @@
 /*
- * ValidationUtil.java
+ * ModelController.java
  *
  * Tech Test Programming Exercise Zup
- * ValidationUtil implements the auxiliary methods providing validation in the data entering in the REST API
+ * ModelController implements the Routs for the REST API
  * @version    0.1.0
  * @author     Guilherme Borges Bastos
 */
@@ -13,8 +13,10 @@ import java.util.List;
 import me.challenge.GenericRestApplication.utils.CollectionDatabaseUtil;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -49,13 +51,23 @@ public class ModelController {
     
     /**
      * Route to list all saved `documents`
-     * @return List of Document
+     * @return List of Documents
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<Document> models() {
         return collectionDatabaseUtil.use("/").getAll();
     }
     
+    /**
+     * Route to list all saved `documents` into specific model
+     * @param model
+     * @return List of Documents
+     */
+    @RequestMapping(value = "/{model}", method = RequestMethod.GET)
+    public List<Document> getAll(@PathVariable("model") String model) {
+        return collectionDatabaseUtil.use(model).getAll();
+    }
+        
     // TODO: finish the mapping of the remaning routes
     
 }
