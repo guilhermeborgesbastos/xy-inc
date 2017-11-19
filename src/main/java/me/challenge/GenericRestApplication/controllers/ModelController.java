@@ -78,6 +78,18 @@ public class ModelController {
     public Document get(@PathVariable("model") String modelo, @PathVariable("id") String ID) {
         return collectionDatabaseUtil.use(modelo).get(ID);
     }
+    
+    /**
+     * Route to save a new model
+     * @param model
+     * @param document
+     * @return Document
+     */
+    @RequestMapping(value = "/{model}", method = RequestMethod.POST)
+    public Document save(@PathVariable("model") String model, @RequestBody Document document) {
+        return collectionDatabaseUtil.use(model).save(document);
+    }
+    
         
     // TODO: finish the mapping of the remaning routes
     
