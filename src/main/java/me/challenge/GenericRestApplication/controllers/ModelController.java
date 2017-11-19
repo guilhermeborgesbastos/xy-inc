@@ -9,6 +9,7 @@
 package me.challenge.GenericRestApplication.controllers;
 
 // >> imports
+import java.util.List;
 import me.challenge.GenericRestApplication.utils.CollectionDatabaseUtil;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class ModelController {
      * @return Document
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Document modeloSave(@RequestBody Document document) {
+    public Document modelSave(@RequestBody Document document) {
         return collectionDatabaseUtil.use("/").save(document);
     }
     
@@ -42,8 +43,17 @@ public class ModelController {
      * @return Document
      */
     @RequestMapping(value = "/", method = RequestMethod.GET, params = "id")
-    public Document modelo(@RequestParam("id") String ID) {
-            return collectionDatabaseUtil.use("/").get(ID);
+    public Document model(@RequestParam("id") String ID) {
+        return collectionDatabaseUtil.use("/").get(ID);
+    }
+    
+    /**
+     * Route to list all saved `documents`
+     * @return List of Document
+     */
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public List<Document> models() {
+        return collectionDatabaseUtil.use("/").getAll();
     }
     
     // TODO: finish the mapping of the remaning routes
