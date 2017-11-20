@@ -10,7 +10,7 @@
 ## Installation and configuration
 Follow these steps to setup the project
 + Clone the repository into a new folder in your machine;
-    * Make sure you have the Git installed: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+    * Make sure you have the Git installed [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git);
     * ```git clone https://github.com/guilhermeborgesbastos/xy-inc.git```
 + Install and configure the MongoDB;
     * [Click here to know how to install MongoDB](https://docs.mongodb.com/getting-started/shell/);
@@ -36,3 +36,7 @@ Using these routes bellow you are able to create and manipulate any endpoint you
 | http://localhost:8095/ `modelId`/ `id` | _DELETE | Delete a document into an specific modelId |
 
 > `modelId` is the ObjectId of the model
+
+## Frontend user interface
+Taking into consideration that this project seeks to assist a  front-end developer to develop a simple REST Application, it was used the ```Advanced Rest Client``` ([Download](https://advancedrestclient.com/)) as a tool to help the user to build their data structure. Saving time and offering a great abstraction level:
+![](https://image.ibb.co/gL2NCm/Save_New_Product_Item_2.jpg)
