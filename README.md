@@ -1,11 +1,11 @@
 # Generic Rest Backend
-> Custom Rest Application using Java 1.8, Tomcat, MongoDB and Spring MVC.
+> Custom Rest Application using Java 1.8, Tomcat 8.5, MongoDB 3.4 and Spring MVC.
 
 ## Requirements
-- Application Server: Apache Tomcat 8.5 [Download](https://tomcat.apache.org/download-80.cgi);
 - JDK/JRE Java Version: 8.* [Download](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html);
-- Database: MongoDB 3.4 [Download](https://docs.mongodb.com/getting-started/shell/installation/);
 - Dependency Manager: Maven [Download](https://maven.apache.org/download.cgi);
+- Application Server: Apache Tomcat 8.5 [Download](https://tomcat.apache.org/download-80.cgi);
+- Database: MongoDB 3.4 [Download](https://docs.mongodb.com/getting-started/shell/installation/);
 
 ## Installation and configuration
 Follow these steps to setup the project
