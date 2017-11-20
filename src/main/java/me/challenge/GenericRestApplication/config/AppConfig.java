@@ -19,7 +19,7 @@ import com.mongodb.client.MongoDatabase;
 @Configuration
 public class AppConfig {
 
-    private static final String MONGODB_URI = "mongodb://mongo/";
+    private static final String MONGODB_URI = "mongodb://localhost/";
 
     @Bean
     public MongoClient mongoClient() {

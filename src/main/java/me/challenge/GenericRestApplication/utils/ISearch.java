@@ -2,7 +2,7 @@
  * ISearch.java
  *
  * Tech Test Programming Exercise Zup
- * This interface represents the behavior of the Search Class where can be expanded as much as needed
+ * This interface represents the behavior of the SearchUtil Class where can be expanded as much as needed
  * @version    0.1.0
  * @author     Guilherme Borges Bastos
 */

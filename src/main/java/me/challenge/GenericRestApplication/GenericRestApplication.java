@@ -1,7 +1,7 @@
 /*
  * GenericRestApplication.java
  *
- * Tech Test Programming Exercise Zup, 
+ * Tech Test Programming Exercise Zup
  * Generic Rest Application
  * @version    0.1.0
  * @author     Guilherme Borges Bastos
@@ -16,7 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class GenericRestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GenericRestApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(GenericRestApplication.class, args);
+    }
+    
 }

@@ -43,7 +43,7 @@ public class CollectionHelper {
     }
 
     /**
-     * 
+     * Method that returns a document into Database
      * @param ID
      * @return Document
     */
