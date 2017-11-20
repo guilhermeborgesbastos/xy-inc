@@ -54,5 +54,5 @@ You can use any MongoDB Client to get access to the database to look your docume
 ![](https://image.ibb.co/hiPSCm/Mongo_DB_Documents_Structure_merged.jpg?cache=false)
 
 ##### Thank you!
-Fell free to open any issue discussion or contact me!
+Feel free to open any issue discussion or contact me!
 
