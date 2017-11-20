@@ -80,6 +80,16 @@ public class CollectionHelper {
     public boolean delete(String ID){
         return collection.deleteOne(searchByID(ID)).wasAcknowledged();
     }
+    
+    
+    /**
+     * Delete a model at all
+     * @param ID
+     * @return 
+    */
+    public void deleteModel(Document document){
+        collection.drop();
+    }
        
     // private method(s)
     /**

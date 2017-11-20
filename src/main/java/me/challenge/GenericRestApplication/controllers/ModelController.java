@@ -89,6 +89,20 @@ public class ModelController {
     public Document save(@PathVariable("model") String model, @RequestBody Document document) {
         return collectionDatabaseUtil.use(model).save(document);
     }
+        
+    /**
+     * Route to delete a model
+     * @param model
+     * @param document
+     * @return Document
+     */
+    @RequestMapping(value = "/{model}", method = RequestMethod.DELETE)
+    public ResponseEntity<Boolean> deleteModel(@PathVariable("model") String model, @RequestBody Document document) {
+        // call the method to delete a collection or model
+        boolean deleteModel = collectionDatabaseUtil.use(model).delete(model);
+        // verify the if the delete got success and return a feedback
+        return deleteModel ? ResponseEntity.ok(true) : ResponseEntity.badRequest().body(false);
+    }
     
     /**
      * Route to update a specific saved `document` into an specific model
