@@ -39,4 +39,15 @@ Using these routes bellow you are able to create and manipulate any endpoint you
 
 ## Frontend user interface
 Taking into consideration that this project seeks to assist a  front-end developer to develop a simple REST Application, it was used the ```Advanced Rest Client``` ([Download](https://advancedrestclient.com/)) as a tool to help the user to build their data structure. Saving time and offering a great abstraction level:
+
 ![](https://image.ibb.co/gL2NCm/Save_New_Product_Item_2.jpg)
+
+## Knowing more
+#### What data types are supported?
+This version supports into the field's type:
+> String, Integer, Boolean, Double, Decimal & Date
+
+#### How the custom models created looks like?
+You can use any MongoDB Client to get access to the database to look your documents and manage the database more deeply, those are the structure of the ```user``` Model:
+
+![](https://image.ibb.co/ev3R56/Mongo_DB_Documents_Structure_merged.jpg)
