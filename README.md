@@ -34,6 +34,7 @@ Using these routes bellow you are able to create and manipulate any endpoint you
 | http://localhost:8095/ `modelId` | _POST | Create a new document ( respecting the fields of the parent modelId ) |
 | http://localhost:8095/ `modelId`/ `id` | _PUT | Edit a document ( respecting the fields of the parent modelId |
 | http://localhost:8095/ `modelId`/ `id` | _DELETE | Delete a document into an specific modelId |
+| http://localhost:8095/ `modelId` | _DELETE | Delete the model at all |
 
 > `modelId` is the ObjectId of the model
 
@@ -50,4 +51,8 @@ This version supports into the field's type:
 #### How the custom models created looks like?
 You can use any MongoDB Client to get access to the database to look your documents and manage the database more deeply, those are the structure of the ```user``` Model:
 
-![](https://image.ibb.co/ev3R56/Mongo_DB_Documents_Structure_merged.jpg)
+![](https://image.ibb.co/hiPSCm/Mongo_DB_Documents_Structure_merged.jpg?cache=false)
+
+##### Thank you!
+Fell free to open any issue discussion or contact me!
+
